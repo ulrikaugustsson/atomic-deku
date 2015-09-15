@@ -8,7 +8,14 @@ const Button = {
 
     const classes = `Button ${props.classes || ''}`;
 
-    return (<button class={classes.trim()}>{props.children}</button>);
+    return (
+      <button
+        class={classes.trim()}
+        {...props}
+      >
+        {props.children}
+      </button>
+    );
   }
 };
 
